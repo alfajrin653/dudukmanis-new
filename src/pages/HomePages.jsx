@@ -1,0 +1,38 @@
+/**
+ * src/App.jsx
+ * Main application component composing layout and sections
+ */
+import React from 'react';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
+// import FloatingCTA from './components/layout/FloatingCTA'
+import HeroSlider from '../components/sections/home/HeroSlider';
+import SearchBar from '../components/sections/home/SearchBar';
+import AboutStats from '../components/sections/home/AboutStats';
+import Services from '../components/sections/home/Services';
+import InternationalSetup from '../components/sections/home/InternationalSetup';
+import OfficeLocation from '../components/sections/VirtualOffice/OfficeLocations';
+import { Virtual } from 'swiper/modules';
+import MengapaKami from '../components/sections/home/Mengapakami';
+import Cta from '../components/sections/home/Cta';
+
+export default function HomePages() {
+  return (
+    <div className='font-sans antialiased text-dark'>
+      {/* <Navbar /> */}
+      <main className='pt-10'>
+        <HeroSlider />
+        <div className='max-w-6xl mx-auto px-4'>
+          <MengapaKami />
+          {/* <AboutStats /> */}
+          <Services />
+          <SearchBar />
+          {/* <InternationalSetup /> */}
+          {/* <OfficeLocation /> */}
+          <Cta />
+        </div>
+      </main>
+      {/* <Footer /> */}
+    </div>
+  );
+}
