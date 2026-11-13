@@ -1,47 +1,117 @@
-<!--
-  index.html
-  Entrypoint and Google Fonts for Duduk Manis
--->
+
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-    <!-- 1. Default SEO & Title (Akan ditimpa oleh Helmet nanti, tapi penting sebagai cadangan awal) -->
-    <title>Duduk Manis - Jasa Pembuatan PT, CV & Firma</title>
-    <meta name="description" content="Solusi legalitas bisnis terpercaya. Kami melayani jasa pembuatan PT, CV, dan Firma dengan proses cepat, resmi, dan harga transparan." />
+    <!-- SEO UTAMA -->
+    <title>
+      Duduk Manis | Jasa Pendirian PT, CV & Legalitas Usaha
+    </title>
+
+    <meta
+      name="description"
+      content="Duduk Manis menyediakan layanan pendirian PT, CV, firma, virtual office, perizinan usaha, pendaftaran merek, dan solusi kebutuhan bisnis Anda."
+    />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
     <meta name="theme-color" content="#2563eb" />
-    <!-- Ubah warna hex ini sesuai warna utama brand Anda -->
 
-    <!-- 2. Favicon (Ikon kecil di tab browser) -->
-    <link rel="icon" type="image/svg+xml" href="/logo-dm.png" />
-    <!-- Ganti href dengan path logo Anda nanti, misal: /logo.png -->
+    <!-- BRANDING -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/logo-dm.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/logo-dm.png"
+    />
 
-    <!-- 3. Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Duduk Manis" />
+    <meta
+      property="og:title"
+      content="Duduk Manis | Solusi Legalitas & Kebutuhan Bisnis"
+    />
+    <meta
+      property="og:description"
+      content="Layanan pendirian PT, CV, firma, virtual office, legalitas usaha, dan solusi bisnis dari Duduk Manis."
+    />
+    <meta
+      property="og:url"
+      content="https://www.dudukmanis.com/"
+    />
 
-    <!-- 4. Schema Markup (Kode Rahasia untuk Google Sitelinks & Profil Bisnis) -->
+    <!-- TWITTER / X -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Duduk Manis | Solusi Legalitas Bisnis"
+    />
+    <meta
+      name="twitter:description"
+      content="Pendirian PT, CV, firma, virtual office, dan layanan legalitas usaha."
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- WEBSITE + ORGANIZATION STRUCTURED DATA -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Duduk Manis",
-        "url": "https://www.dudukmanis.com",
-        "logo": "https://www.dudukmanis.com/logo.png",
-        "description": "Layanan jasa pembuatan PT, CV, dan Firma resmi dengan proses cepat.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+62-812-3456-7890",
-          "contactType": "customer service",
-          "areaServed": "ID",
-          "availableLanguage": "Indonesian"
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.dudukmanis.com/#website",
+          "url": "https://www.dudukmanis.com/",
+          "name": "Duduk Manis",
+          "alternateName": "dudukmanis.com",
+          "inLanguage": "id-ID",
+          "publisher": {
+            "@id": "https://www.dudukmanis.com/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.dudukmanis.com/#organization",
+          "name": "Duduk Manis",
+          "url": "https://www.dudukmanis.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.dudukmanis.com/logo-dm.png"
+          },
+          "description": "Penyedia layanan pendirian badan usaha, legalitas bisnis, virtual office, dan kebutuhan bisnis di Indonesia.",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Indonesia"
+          }
         }
-      }
+      ]
+    }
     </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
